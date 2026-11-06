@@ -1,4 +1,5 @@
-   const kontener = document.getElementById("snieg");
+
+const kontener = document.getElementById("snieg");
 
         // Wysokość śniegu w różnych miejscach ekranu
         const szerokosc = 10;
@@ -57,4 +58,3 @@
             });
         }
 
-       
