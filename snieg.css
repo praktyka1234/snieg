@@ -1,0 +1,69 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+#snieg {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.plat {
+    position: absolute;
+    top: -40px;
+
+    color: rgb(253, 250, 250);
+
+    animation-name: spadanie;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+
+    will-change: transform;
+}
+
+@keyframes spadanie {
+
+    from {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    to {
+        transform: translateY(110vh) rotate(360deg);
+    }
+} 
+
+
+.tla {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.tlo {
+    position: absolute;
+    inset: 0;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.tlo.aktywne {
+    opacity: 1;
+}
